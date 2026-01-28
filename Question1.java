@@ -1,30 +1,24 @@
 class Student {
-    // Private attributes (encapsulation)
     private int id;
     private String name;
     private double cgpa;
 
-    // Setter for id
     public void setId(int id) {
         this.id = id;
     }
 
-    // Getter for id
     public int getId() {
         return id;
     }
 
-    // Setter for name
     public void setName(String name) {
         this.name = name;
     }
 
-    // Getter for name
     public String getName() {
         return name;
     }
 
-    // Setter for cgpa with validation
     public void setCgpa(double cgpa) {
         if (cgpa >= 0.0 && cgpa <= 4.0) {
             this.cgpa = cgpa;
@@ -33,7 +27,6 @@ class Student {
         }
     }
 
-    // Getter for cgpa
     public double getCgpa() {
         return cgpa;
     }
@@ -41,19 +34,14 @@ class Student {
 
 public class Main {
     public static void main(String[] args) {
-
-        // Object creation
         Student s1 = new Student();
 
-        // Setting values
         s1.setId(101);
         s1.setName("Protham");
-        s1.setCgpa(3.5);   // valid CGPA
+        s1.setCgpa(3.5);
 
-        // Trying invalid CGPA
-        s1.setCgpa(4.8);   // invalid CGPA
+        s1.setCgpa(4.8);
 
-        // Displaying student details
         System.out.println("Student ID: " + s1.getId());
         System.out.println("Student Name: " + s1.getName());
         System.out.println("Student CGPA: " + s1.getCgpa());
